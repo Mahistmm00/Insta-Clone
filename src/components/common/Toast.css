@@ -1,0 +1,72 @@
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toast.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.toast.success {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  border-left: 4px solid #2e7d32;
+}
+
+.toast.error {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  border-left: 4px solid #c62828;
+}
+
+.toast.warning {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  border-left: 4px solid #ef6c00;
+}
+
+.toast.info {
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+  border-left: 4px solid #1565C0;
+}
+
+.toast-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toast-message {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  flex: 1;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 12px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.toast-close:hover {
+  opacity: 1;
+}

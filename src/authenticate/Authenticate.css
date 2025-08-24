@@ -1,0 +1,128 @@
+.authenticate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.auth__left {
+  flex: 0.3;
+  text-align: center;
+  margin-right: 40px;
+}
+
+.auth__right {
+  flex: 0.32;
+  max-width: 400px;
+}
+
+.auth__left > img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.auth__more {
+  border: 1px solid #333;
+  padding: 20px;
+  margin: 13px 0;
+  text-align: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.auth__more:hover {
+  border-color: #555;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.auth__more > span {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.auth__more > span > button {
+  background: 0;
+  border: 0;
+  font-weight: bolder;
+  color: #0095f6;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.auth__more > span > button:hover {
+  background: rgba(0, 149, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+.get__app {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.get__app > span {
+  font-size: 14px;
+  color: #ccc;
+  font-weight: 400;
+}
+
+.app_links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.app_links img {
+  transition: transform 0.2s ease;
+  border-radius: 6px;
+}
+
+.app_links img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .authenticate {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .auth__left {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .auth__left > img {
+    max-width: 300px;
+  }
+  
+  .auth__right {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .app_links {
+    gap: 10px;
+  }
+  
+  .app_links img {
+    height: 35px !important;
+  }
+}
